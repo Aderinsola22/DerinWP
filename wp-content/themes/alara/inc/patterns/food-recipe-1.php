@@ -1,7 +1,7 @@
 <?php
 return array(
 			'title'         => __( 'Title, image and 2 columns', 'alara' ),
-			'categories'    => array( 'alara-new', 'alara-recipes' ),
+			'categories'    => array( 'alara-recipes' ),
 			'keywords'		=> array( 'recipe', 'food' ),
 			'viewportWidth' => 1440,
 			'content'       => '<!-- wp:group {"backgroundColor":"white"} -->

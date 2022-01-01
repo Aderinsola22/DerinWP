@@ -69,7 +69,11 @@ if ( ! function_exists( 'whp_hidden_posts_ids' ) ) {
                             array(
                                 'key' => '_whp_hide_on_post_navigation',
                                 'compare' => 'EXISTS'
-                            )
+                            ),
+                            array(
+                                'key'     => '_whp_hide_on_recent_posts',
+                                'compare' => 'EXISTS',
+                            ),
                         );
                         break;
             case 'front_page': $meta_query = array(
@@ -128,6 +132,14 @@ if ( ! function_exists( 'whp_hidden_posts_ids' ) ) {
                             )
                         );
                         break;
+            case 'recent_posts':
+                $meta_query = array(
+                    array(
+                        'key'     => '_whp_hide_on_recent_posts',
+                        'compare' => 'EXISTS',
+                    ),
+                );
+                break;
             default: return [];
         }
 

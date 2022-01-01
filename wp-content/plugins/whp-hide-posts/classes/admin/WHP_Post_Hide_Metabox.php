@@ -115,6 +115,7 @@ class WHP_Post_Hide_Metabox {
 		$whp_hide_on_blog_page  = get_post_meta( $post_id, "_whp_hide_on_blog_page", true );
 		$whp_hide_on_date  = get_post_meta( $post_id, "_whp_hide_on_date", true );
 		$whp_hide_on_post_navigation  = get_post_meta( $post_id, "_whp_hide_on_post_navigation", true );
+		$whp_hide_on_recent_posts    = get_post_meta( $post_id, '_whp_hide_on_recent_posts', true );
 
 		if ( whp_wc_exists() && whp_admin_wc_product() ) {
 			$whp_hide_on_store  = get_post_meta( $post_id, "_whp_hide_on_store", true );
@@ -159,6 +160,10 @@ class WHP_Post_Hide_Metabox {
 			$hide_on .= __( 'Single post navigation' ) . ', ';
 		}
 
+		if ( $whp_hide_on_recent_posts ) {
+			$hide_on .= __( 'Recent Posts Widget', 'whp-hide-posts' ) . ', ';
+		}
+
 		if ( isset( $whp_hide_on_store ) && $whp_hide_on_store ) {
 			$hide_on .= __( 'Store page' ) . ', ';
 		}
@@ -192,6 +197,7 @@ class WHP_Post_Hide_Metabox {
 		$whp_hide_on_blog_page  = get_post_meta( $post->ID, "_whp_hide_on_blog_page", true );
 		$whp_hide_on_date  = get_post_meta( $post->ID, "_whp_hide_on_date", true );
 		$whp_hide_on_post_navigation  = get_post_meta( $post->ID, "_whp_hide_on_post_navigation", true );
+		$whp_hide_on_recent_posts    = get_post_meta( $post->ID, '_whp_hide_on_recent_posts', true );
 
 		if ( whp_wc_exists() && whp_admin_wc_product() ) {
 			$whp_hide_on_store  = get_post_meta( $post->ID, "_whp_hide_on_store", true );
@@ -244,6 +250,7 @@ class WHP_Post_Hide_Metabox {
 		$whp_data['_whp_hide_on_blog_page'] = ! empty( $_POST['whp_hide_on_blog_page'] ) ? true : false;
 		$whp_data['_whp_hide_on_date'] = ! empty( $_POST['whp_hide_on_date'] ) ? true : false;
 		$whp_data['_whp_hide_on_post_navigation'] = ! empty( $_POST['whp_hide_on_post_navigation'] ) ? true : false;
+		$whp_data['_whp_hide_on_recent_posts']    = ! empty( $_POST['whp_hide_on_recent_posts'] ) ? true : false;
 
 		if ( whp_wc_exists() && whp_admin_wc_product() ) {
 			$whp_data['_whp_hide_on_store'] = ! empty( $_POST['whp_hide_on_store'] ) ? true : false;

@@ -3,7 +3,7 @@ Contributors: uxl
 Tested up to: 5.8
 Requires at least: 5.8
 Requires PHP: 5.6
-Version: 1.2
+Version: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,13 @@ Description: A modern block theme with a hint of vintage styling, Alara is bundl
 A modern block theme with a hint of vintage styling, Alara is bundled with a plethora of patterns to suit many varieties of website. Look out for a new pattern or alternative optional site design (or child theme) released every week for 1 year.
 
 == Changelog ==
+1.2.2 - December 2021
+Added new Feature Comparison 3 pattern
+
+1.2.1 - December 2021
+Tidying up some instances of className in templates and patterns
+Added new Hero with Gradient and Media/Text pattern
+
 1.2 - December 2021
 Updated single template to use block style for post-content width
 Updated layout widths to use minimum and rem values to give effective spacing on narrow screens

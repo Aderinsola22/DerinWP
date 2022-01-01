@@ -1,7 +1,7 @@
 <?php
 return array(
 			'title'         => __( 'Header with Top Bar', 'alara' ),
-			'categories'    => array( 'alara-headers', 'alara-new' ),
+			'categories'    => array( 'alara-headers' ),
 			'blockTypes'    => array( 'core/template-part/header' ),
 			'viewportWidth' => 1440,
 			'content'       => '<!-- wp:group {"align":"full","textColor":"foreground","className":"site-header","layout":{"inherit":true},"style":{"spacing":{"padding":{"bottom":"1em"}}}} -->

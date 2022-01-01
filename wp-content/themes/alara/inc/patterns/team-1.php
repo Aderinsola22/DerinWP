@@ -9,8 +9,8 @@ return array(
 <h2 class="has-text-align-center" id="meet-the-team">Meet the Team</h2>
 <!-- /wp:heading -->
 
-<!-- wp:separator {"color":"primary","className":"is-style-default"} -->
-<hr class="wp-block-separator has-text-color has-background has-primary-background-color has-primary-color is-style-default"/>
+<!-- wp:separator {"color":"primary"} -->
+<hr class="wp-block-separator has-text-color has-background has-primary-background-color has-primary-color"/>
 <!-- /wp:separator -->
 
 <!-- wp:spacer {"height":9} -->

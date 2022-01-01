@@ -1,7 +1,7 @@
 <?php
 return array(
 			'title'         => __( 'Header Boxed', 'alara' ),
-			'categories'    => array( 'alara-headers-boxed', 'alara-new' ),
+			'categories'    => array( 'alara-headers-boxed' ),
 			'blockTypes'    => array( 'core/template-part/header' ),
 			'viewportWidth' => 1440,
 			'content'       => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"1em","bottom":"1em"}}},"className":"site-header","layout":{"inherit":true}} -->
@@ -42,28 +42,8 @@ return array(
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"className":"is-style-no-block-gap"} -->
-	<div class="wp-block-group is-style-no-block-gap" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
-
-		<!-- wp:columns {"isStackedOnMobile":false,"style":{"spacing":{"blockGap":"0px"}}} -->
-		<div class="wp-block-columns is-not-stacked-on-mobile">
-
-			<!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"backgroundColor":"primary"} -->
-			<div class="wp-block-column has-primary-background-color has-background" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"></div>
-			<!-- /wp:column -->
-
-			<!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"backgroundColor":"tertiary"} -->
-			<div class="wp-block-column has-tertiary-background-color has-background" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"></div>
-			<!-- /wp:column -->
-
-			<!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"backgroundColor":"quaternary"} -->
-			<div class="wp-block-column has-quaternary-background-color has-background" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"></div>
-			<!-- /wp:column -->
-
-		</div>
-		<!-- /wp:columns -->
-
-	</div>
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}},"className":"is-style-no-block-gap"},"gradient":"primary-tertiary-quaternary"} -->
+	<div class="wp-block-group has-primary-tertiary-quaternary-gradient-background has-background is-style-no-block-gap" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"></div>
 	<!-- /wp:group -->
 
 </div>

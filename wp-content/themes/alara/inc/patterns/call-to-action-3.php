@@ -1,7 +1,7 @@
 <?php
 return array(
 			'title'         => __( 'Call to Action 3', 'alara' ),
-			'categories'    => array( 'alara-cta', 'alara-new' ),
+			'categories'    => array( 'alara-cta' ),
 			'keywords'		=> array( 'newsletter', 'column', 'button' ),
 			'viewportWidth' => 1280,
 			'content'       => '<!-- wp:columns -->

@@ -33,7 +33,7 @@ class WHP_Admin_Dashboard {
      */
 	public function settings() {
         $post_types = get_post_types( [ 'public' => true ], 'object' );
-        $enabled_post_types = get_option( 'whp_enabled_post_types' );
+        $enabled_post_types = get_option( 'whp_enabled_post_types', array() );
         $whp_disable_hidden_on_column = get_option( 'whp_disable_hidden_on_column' );
 
         @include_once WHP_PLUGIN_DIR . 'views/admin/template-admin-dashboard.php';

@@ -35,6 +35,10 @@ function alara_pattern_content( $content ) {
 			return esc_url( get_theme_file_uri( 'assets/images/man-4.jpg' ) );
 			break;
 
+		case 'image-man-4-transparent':
+			return esc_url( get_theme_file_uri( 'assets/images/man-4-transparent.png' ) );
+			break;
+
 		case 'image-camera':
 			return esc_url( get_theme_file_uri( 'assets/images/camera.jpg' ) );
 			break;

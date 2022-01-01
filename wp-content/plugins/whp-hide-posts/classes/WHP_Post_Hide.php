@@ -35,6 +35,8 @@ class WHP_Post_Hide {
 		add_action( 'parse_query', array( $this, 'parse_query') );
 		add_filter( 'get_next_post_where', array( $this, 'hide_from_post_navigation' ), 10, 1 );
 		add_filter( 'get_previous_post_where', array( $this, 'hide_from_post_navigation' ), 10, 1 );
+		add_filter( 'widget_posts_args', array( $this, 'hide_from_recent_post_widget' ), 10, 1 );
+		add_filter( 'zeen_pagination_query', array( $this, 'zeen_pagination_query' ) );
 	}
 
 	/**
@@ -141,5 +143,45 @@ class WHP_Post_Hide {
 		$where .= $wpdb->prepare( " AND ID NOT IN ( $ids_placeholders )", ...$hidden_on_post_navigation );
 
 		return $where;
+	}
+
+	/**
+	 * Hide posts from default WordPress recent post widget
+	 *
+	 * @param   array $query_args WP_Query arguments.
+	 *
+	 * @return  array
+	 */
+	public function hide_from_recent_post_widget( $query_args ) {
+		$hidden_on_recent_posts = whp_hidden_posts_ids( 'post', 'recent_posts' );
+
+		if ( empty( $hidden_on_recent_posts ) ) {
+			return $query_args;
+		}
+
+		$query_args['post__not_in'] = $hidden_on_recent_posts;
+
+		return $query_args;
+	}
+
+	/**
+	 * Load more zeen query compabitlity
+	 *
+	 * @param  array $qry The query.
+	 *
+	 * @return array
+	 */
+	public function zeen_pagination_query( $qry = array() ) {
+		if ( ! is_array( $qry ) ) {
+			return $qry;
+		}
+
+		$post_type = ! empty( $qry['post_type'] ) ? $qry['post_type'] : 'post';
+
+		$plugin_post_ids_hidden = whp_hidden_posts_ids( $post_type );
+
+		$qry['post__not_in'] = empty( $qry['post__not_in'] ) ? $plugin_post_ids_hidden : array_merge( $plugin_post_ids_hidden, $qry['post__not_in'] );
+
+		return $qry;
 	}
 }

@@ -68,6 +68,12 @@ global $post;
 			<?php _e( 'Hide from post navigation', 'whp' ); ?>
 		</label>
 	</p>
+	<p>
+		<label for='whp_hide_on_recent_posts'>
+			<input type='checkbox' name="whp_hide_on_recent_posts" value='1' <?php checked( $whp_hide_on_recent_posts, 1 ); ?> id='whp_hide_on_recent_posts'>
+			<?php esc_html_e( 'Hide from recent posts widget', 'whp-hide-posts' ); ?>
+		</label>
+	</p>
 	<?php if ( whp_wc_exists() && whp_admin_wc_product() ) : ?>
 		<h4><?php _e( 'Woocommerce options', 'whp' ); ?></h4>
 		<p>

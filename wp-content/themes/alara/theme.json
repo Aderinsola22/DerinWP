@@ -75,6 +75,11 @@
 			],
 			"gradients": [
 				{
+					"slug": "primary-tertiary-quaternary",
+					"name": "Primary Tertiary Quaternary",
+					"gradient": "linear-gradient(90deg, var(--wp--preset--color--primary) 33.33%, var(--wp--preset--color--tertiary) 33.33%, var(--wp--preset--color--tertiary) 66.66%, var(--wp--preset--color--quaternary) 66.66%)"
+				},
+				{
 					"slug": "foreground-fade",
 					"name": "Foreground Fade",
 					"gradient": "linear-gradient(150deg,var(--wp--preset--color--foreground) 0%,var(--wp--preset--color--tertiary) 90%)"
@@ -446,11 +451,6 @@
 				},
 				"border": {
 					"radius": "3px"
-				}
-			},
-			"core/media-text": {
-				"color": {
-					"background": "var:preset|color|background"
 				}
 			},
 			"core/pullquote": {
