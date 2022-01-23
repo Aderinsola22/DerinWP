@@ -39,6 +39,11 @@ if ( ! function_exists( 'alara_block_styles' ) ) {
 				'blocks' => 'group',
 				'style' => '.is-style-no-block-gap-row{gap: 0 !important;}'
 			),
+			'zero-gap' => array(
+				'label' => __( 'No Gaps', 'alara' ),
+				'blocks' => 'columns',
+				'style' => '.wp-block-columns.is-style-zero-gap{margin-bottom: 0} .wp-block-columns.is-style-zero-gap > .wp-block-column{margin-left: 0 !important;}'
+			),
 			'no-bottom-margin' => array(
 				'label' => __( 'No Bottom Margin', 'alara' ),
 				'blocks' => 'image',

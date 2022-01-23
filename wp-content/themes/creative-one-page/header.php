@@ -33,7 +33,7 @@
       <div class="container">
         <div class="info-header">
           <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 pe-md-0 align-self-center">
+            <div class="col-lg-3 col-md-3 col-sm-3 pe-md-0">
               <div class="logo">
                 <?php if ( has_custom_logo() ) : ?>
                   <div class="site-logo"><?php the_custom_logo(); ?></div>

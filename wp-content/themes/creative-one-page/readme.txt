@@ -4,7 +4,7 @@ Tags: wide-blocks, flexible-header, block-styles, left-sidebar, right-sidebar, o
 Requires at least: 5.0
 Tested up to: 5.8
 Requires PHP: 7.2
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 License: GPLv3.0 or later
 License URI: http://www.gnu.org/licenses/gps-3.0.html
 
@@ -28,6 +28,9 @@ Creative One Page is a stunning WordPress theme built using a dependable and pow
 = 0.2.2 =
 * Added show/hide Blog post image option.
 * Added language folder.
+
+= 0.2.3 =
+* Added hover on topbar.
 
 == Resources ==
 

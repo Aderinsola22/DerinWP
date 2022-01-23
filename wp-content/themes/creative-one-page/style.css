@@ -6,7 +6,7 @@ Author URI: https://www.themeshopy.com/
 Description: Creative One Page is a stunning WordPress theme built using a dependable and powerful Bootstrap framework and can scale to any business site, blog, portfolio, online store, agency, eCommerce site, storefront, web designers, entrepreneurs, artists, marketing experts, etc. It uses clean, secure, and highly optimized codes for speeding up the performance and giving you faster page load time. The design of this theme is simple and adaptable to give a seamless performance on any device that your audience prefers to use. You can upload the logo to make the overall appearance professional and there are a lot of personalization options letting you tweak the colors, typography, title, tagline, etc. There are SEO-friendly codes included in the design and a well-placed Call To Action Button (CTA) helping in boosting conversion rates. An interactive environment is provided where potential clients can contact you and subscribe using the newsletter. You can be assured of a fantastic website thanks to this robust WordPress Theme that can handle huge traffic flows without causing your website to bloat. A wonderful banner, different sections such as Team and testimonial section are included as a part of this theme and the social media options are there to help you in business promotion.
 Tested up to: 5.8
 Requires PHP: 7.2
-Version: 0.2.2
+Version: 0.2.3
 License: GPLv3.0 or later
 License URI: http://www.gnu.org/licenses/gps-3.0.html
 Text Domain: creative-one-page
@@ -378,6 +378,7 @@ a.closebtn.mobile-menu, .toggle-menu, #category .owl-dots, a.closebtn, #sidebar 
   background: #90c908;
   padding: 20px 10px;
   text-align: center;
+  height: 100%;
 }
 .logo a,h1.site-title{
   color: #fff;
@@ -429,7 +430,9 @@ a.info-mail, .info-mail {
 .border-rig {
   border-right: solid 1px #ced3d4;
 }
-
+.border-rig a:hover, .info-mail:hover, .social-icons a:hover{
+  color: #90c908;
+}
 /* --------- MENUS CSS --------- */
 
 .primary-navigation ul{
